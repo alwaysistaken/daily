@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "jsx": "react", // 允许引用jsx模板,
+    "module": "es6", //生成es6模块的代码
+    "allowSyntheticDefaultImports": true // 允许使用imoprt 引入默认变量
+  },
+  "include": ["./src/**/*"]
+}
