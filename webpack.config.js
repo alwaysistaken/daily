@@ -23,10 +23,22 @@ module.exports = {
       },
     ],
   }, // loader配置
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
+    alias: {
+      "@": path.resolve(__dirname, "../src"),
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "webpack_init", // 模板tile
       template: "src/index.html", // 模板目录
+      favicon: path.join(__dirname, "./public/logo.png"),
     }),
   ], // 插件配置
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000,
+    open: true,
+  },
 };
